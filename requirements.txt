@@ -1,0 +1,7 @@
+bs4
+requests
+flask
+Flask
+jsonify
+uwsgi
+flask-cors
