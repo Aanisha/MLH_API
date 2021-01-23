@@ -46,7 +46,7 @@ def getInfo(url):
     return final_events
 
 @app.route('/hackathons/MLH', methods=['GET'])
-def corona(): 
+def MLH(): 
     # url to get event info
     url = "https://mlh.io/seasons/2021/events"
   
