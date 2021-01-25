@@ -63,7 +63,7 @@ def communities():
 @app.route('/opensource', methods=['GET'])
 def opensource():
     open_source = {'1'{'name':'MLH Fellowship','link':'https://fellowship.mlh.io/','desc':'The MLH Fellowship is a 12-week internship alternative for aspiring software engineers. Our programs pair fun, educational curriculum with practical experience that you can put on your resume right away. Its collaborative, remote, and happens under the guidance of expert mentors.'},'2':{'name':'Google Summer of Code','link':'https://summerofcode.withgoogle.com/','desc':'Google Summer of Code is a global program focused on bringing more student developers into open source software development. Students work with an open source organization on a 10 week programming project during their break from school.'}}
-    return jsonify(opensource)
+    return jsonify(open_source)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
