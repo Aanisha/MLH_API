@@ -52,7 +52,13 @@ def MLH():
   
     # calling the get_info method 
     ans = getInfo(url)
-    return jsonify(ans)  
+    return jsonify(ans)
+
+@app.route('/communities' , methods=['GET'])
+def communities():
+    
+    comms = {'1':{'name':'Women Who Code','link':'https://www.womenwhocode.com/','description':'Women Who Code is an international nonprofit organization that provides a global community for women in tech with events, coding resources, jobs, mentorship, and more. They aim to inspire, support, and help women develop technical skills and excel in their careers.'},'2':{'name':'Hashnode','link':'','description':''},'2':{'name':'Hashnode','link':'','description':''},'2':{'name':'Hashnode','link':'http://hashnode.com/','description':'Hashnode is an online community where developers share knowledge and grow their careers. Developers from around the world participate in consequential discussions on Hashnode. You can write stories, ask open-ended questions as well as technical questions, ask questions anonymously, and start polls.'},'3':{'name':'Freecodecamp','link':'https://www.freecodecamp.org/','description':'freeCodeCamp is a nonprofit organization that helps people learn to code for free through thousands of videos, articles, interactive coding lessons and thousands of freeCodeCamp study groups around the world.'},'4':{'name':'StackOverflow','link':'https://stackoverflow.com/','description':'Stack Overflow is a question and answer site for programmers with tons of questions and answers on a wide range of topics in computer programming.You can learn from already asked and answered questions, share your programming knowledge by answering asked questions or share your issues/bugs here.'},'5':{'name':'Facebook Developers Circle','link':'https://developers.facebook.com/developercircles/','description':'Developer Circles from Facebook is a program designed to create locally organized communities for developers. These communities educate and provide a forum for discussion and knowledge sharing around topics that are top-of-mind for developers in a particular market.'},'6':{'name':'Google Developer Groups','link':'https://developers.google.com/community/gdg','description':'GDG brings software developers with similar interests together to meet through meetups and hands-on workshops. The community welcomes everyone and anyone interested in tech from beginners to experienced professionals.`'},'7':{'name':'Microsoft Learn Student Ambassadors','link':'https://studentambassadors.microsoft.com/','description':'Microsoft Learn Student Ambassadors are a global group of campus leaders who are ready to help fellow students, create robust tech communities, and develop technical and career skills for the future'}}
+    return jsonify(comms)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
